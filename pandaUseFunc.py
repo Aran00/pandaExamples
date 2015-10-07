@@ -6,6 +6,8 @@ from pandas import Series, DataFrame
 frame = DataFrame(np.random.randn(4, 3), columns=list('bde'),
                   index=['Utah', 'Ohio', 'Texas', 'Oregon'])
 # numpy function, for each element
+print frame
+'''
 np.abs(frame)
 
 # function for 1D arrays
@@ -16,16 +18,17 @@ frame.sum(axis=1)
 
 def func(x):
     return Series([x.min(), x.max()], index=['min', 'max'])
-frame.apply(func)
+print frame.apply(func)
 
+'''
 # function for each element
 format = lambda x: "%.2f" % x
-frame.applymap(format)
-
+print frame.applymap(format)
+'''
 # function for Series, element level
 frame['e'].map(format)
 
-''' Sort methods '''
+'' Sort methods ''
 obj = Series([4, 7, -3, 2], index=['d', 'a', 'b', 'c'])
 obj.sort_index()
 obj.order()
@@ -41,3 +44,4 @@ obj = Series(range(5), index=['a', 'a', 'b', 'b', 'c'])
 print obj['a']
 df = DataFrame(np.random.randn(4, 3), index=['a', 'a', 'b', 'b'])
 print df.ix['b']
+'''

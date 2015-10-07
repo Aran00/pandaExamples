@@ -3,7 +3,7 @@ __author__ = 'ryu'
 import numpy as np
 import pandas as pd
 from pandas import Series, DataFrame
-
+'''
 obj = Series([4.5, 7.2, -5.3, 3.6], index=['d', 'b', 'a', 'c'])
 obj2 = obj.reindex(['a', 'b', 'c', 'd', 'e'])
 obj.reindex(['a', 'b', 'c', 'd', 'e'], fill_value=0)
@@ -21,7 +21,7 @@ print frame5
 
 obj = Series(np.arange(5.), index=['a', 'b', 'c', 'd', 'e'])
 new_obj = obj.drop(['d', 'c'])
-
+'''
 data = DataFrame(np.arange(16).reshape((4, 4)),
                  index=['Ohio', 'Colorado', 'Utah', 'New York'],
                  columns=['one', 'two', 'three', 'four'])

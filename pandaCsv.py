@@ -5,14 +5,18 @@ import numpy as np
 import sys, csv
 from pandas import Series
 
-'''
-df = pd.read_csv('ch06/ex1.csv')
-pd.read_table('ch06/ex1.csv', sep=',')
-pd.read_csv('ch06/ex2.csv', header=None)
-pd.read_csv('ch06/ex2.csv', names=['a', 'b', 'c', 'd', 'message'])
-parsed = pd.read_csv('ch06/csv_mindex.csv', index_col=['key1', 'key2'])
-pd.read_csv('ch06/csv_mindex.csv', index_col=['key2', 'key1']).sort_index(0)
+class PandaCsv:
+    def __init__(self):
+        pass
 
+    def read_csv_data(self):
+        pd.read_csv('ch06/ex1.csv')
+        pd.read_table('ch06/ex1.csv', sep=',')
+        pd.read_csv('ch06/ex2.csv', header=None)
+        pd.read_csv('ch06/ex2.csv', names=['a', 'b', 'c', 'd', 'message'])
+        pd.read_csv('ch06/csv_mindex.csv', index_col=['key1', 'key2'])
+        pd.read_csv('ch06/csv_mindex.csv', index_col=['key2', 'key1']).sort_index(0)
+'''
 result = pd.read_table('ch06/ex3.csv', sep='\s+')
 pd.read_csv('ch06/ex4.csv', skiprows=[0, 2, 3])
 pd.read_csv('ch06/ex5.csv', na_values=['NULL'])
